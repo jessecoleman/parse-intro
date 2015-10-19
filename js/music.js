@@ -14,10 +14,9 @@ $('form').submit(function() {
 
 	// For each input element, set a property of your new instance equal to the input's value
 
-	var input = $('input[type="text"]');
-	for(var ele of input) {
-		m2.set(ele.id, ele.val());
-	}
+	$(this).find('input').each(function() {
+		music.set($(this).attr('id'), $(this).val());
+	})
 
 	/*m2.set('band', $('#name').val());
 	m2.set('website', $('#website').val());
